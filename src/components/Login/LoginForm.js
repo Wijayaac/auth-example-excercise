@@ -32,25 +32,25 @@ const LoginForm = () => {
   };
 
   return (
-    <div>
+    <div className='form-wrapper'>
       <form onSubmit={handleSubmit(handleLogin)}>
         <div className='field'>
-          <label htmlFor='email'></label>
+          <label htmlFor='email'>Your email</label>
           <input
             type='email'
             id='email'
-            {...register("email", { required: true })}
+            {...register("email", { required: "Email is required" })}
           />
-          {errors.email && errors.email.message}
+          {errors.email && <span>{errors.email.message}</span>}
         </div>
         <div className='field'>
-          <label htmlFor='password'></label>
+          <label htmlFor='password'>Your password</label>
           <input
             type='password'
             id='password'
-            {...register("password", { required: true })}
+            {...register("password", { required: "Password required" })}
           />
-          {errors.password && errors.password.message}
+          {errors.password && <span>{errors.password.message}</span>}
         </div>
         <button>Login</button>
       </form>

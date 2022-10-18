@@ -15,8 +15,8 @@ const Navbar = () => {
     toast.success("You're logged out");
   };
   return (
-    <header>
-      <p>Dsh</p>
+    <header className='header'>
+      <p className='logo'>Dsh</p>
       <nav className='menu'>
         <button onClick={handleLogout}>Logout</button>
       </nav>
