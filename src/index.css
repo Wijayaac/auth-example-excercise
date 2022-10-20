@@ -11,3 +11,129 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --white: #EEEEEE;
+  --orange: #DC5F00;
+  --gray: #3C4048;
+  --red: #CF0A0A;
+  --transition: all 400ms, 400ms ease;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+.page-wrap {
+  position: relative;
+  max-width: 86.25rem;
+  padding-left: 1.88rem;
+  padding-right: 1.88rem;
+  margin: 0 auto;
+}
+
+.page-wrap h1 {
+  text-align: center;
+}
+
+.page-login {
+  margin-top: 7.5rem;
+}
+
+.form-wrapper {
+  max-width: 30rem;
+  background-color: var(--white);
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  margin-top: 40px;
+  border-radius: 1.25rem;
+}
+
+.form-wrapper form {
+  width: 80%;
+}
+
+.form-wrapper .field {
+  margin-bottom: .63rem;
+  position: relative;
+  padding-bottom: 1.25rem;
+}
+
+.form-wrapper .field label {
+  margin-bottom: 10px;
+  display: block;
+  text-transform: uppercase;
+  color: var(--gray);
+  font-size: 12px;
+  letter-spacing: 0.03em;
+}
+
+.form-wrapper .field input {
+  height: 50px;
+  width: 100%;
+  border-radius: .63rem;
+  padding-left: 1.25rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 0 1px var(--orange);
+  transition: var(--transition);
+}
+
+.form-wrapper .field input:hover {
+  box-shadow: 0 0 0 2px var(--orange);
+}
+
+.form-wrapper .field span {
+  position: absolute;
+  bottom: 0;
+  left: .31rem;
+  color: var(--red);
+  font-size: .75rem;
+  letter-spacing: 0.02em;
+}
+
+.form-wrapper button {
+  padding: .75rem 1.5rem;
+  background-color: var(--gray);
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 1.13rem;
+  border-radius: .75rem;
+}
+
+/* Navbar */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.header button {
+  padding: .75rem 1.5rem;
+  background-color: var(--orange);
+  color: var(--white);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
