@@ -35,13 +35,13 @@ const LoginForm = () => {
     <div className='form-wrapper'>
       <form onSubmit={handleSubmit(handleLogin)}>
         <div className='field'>
-          <label htmlFor='email'>Your email</label>
+          <label htmlFor='username'>Your username</label>
           <input
-            type='email'
-            id='email'
-            {...register("email", { required: "Email is required" })}
+            type='text'
+            id='username'
+            {...register("username", { required: "Email is required" })}
           />
-          {errors.email && <span>{errors.email.message}</span>}
+          {errors.username && <span>{errors.username.message}</span>}
         </div>
         <div className='field'>
           <label htmlFor='password'>Your password</label>
